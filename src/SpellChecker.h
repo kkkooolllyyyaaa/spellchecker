@@ -40,6 +40,8 @@ public:
 
     void sortWordTrigrams();
 
+    int getUniqueWordsCnt();
+
     std::vector<std::string> getLikelyWords(double N);
 
     std::vector<std::pair<std::string, int>> getTrigrams();

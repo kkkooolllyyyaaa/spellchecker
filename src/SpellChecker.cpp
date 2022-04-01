@@ -61,8 +61,6 @@ double SpellChecker::calculateWordIndex(const std::string &word) {
         Index += littleIndex * littleIndex;
         it++;
     }
-//    std::cout << word << ' ' << sqrt(Index / double(trigrams.size())) << std::endl;
-
     return sqrt(Index / double(trigrams.size()));
 }
 
@@ -111,4 +109,8 @@ std::vector<std::pair<std::string, int>> SpellChecker::getDigrams() {
 bool SpellChecker::nGramsComparator(const std::pair<std::string, int> &ng1,
                                     const std::pair<std::string, int> &ng2) {
     return ng1.second > ng2.second;
+}
+
+int SpellChecker::getUniqueWordsCnt() {
+    return wordTrigrams.size();
 }

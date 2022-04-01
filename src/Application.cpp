@@ -45,6 +45,7 @@ void Application::start() {
         info(e.getMessage());
         spellChecker.calculateIndexes();
         spellChecker.sortWordTrigrams();
+        info("Total " + std::to_string(spellChecker.getUniqueWordsCnt()) + " unique words found");
         info("Enter [help] for info");
         interactiveMode(spellChecker);
     }

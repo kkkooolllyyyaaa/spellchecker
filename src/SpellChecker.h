@@ -18,7 +18,7 @@ private:
     };
     std::unordered_map<std::string, int> digramCnt;
     std::unordered_map<std::string, int> trigramCnt;
-    std::unordered_map<std::string, std::unordered_set<std::string>> wordTrigrams;
+    std::unordered_map<std::string, std::unordered_set<std::string> > wordTrigrams;
     std::vector<wordIndex> wordIndexes;
 
 
@@ -44,9 +44,9 @@ public:
 
     std::vector<std::string> getLikelyWords(double N);
 
-    std::vector<std::pair<std::string, int>> getTrigrams();
+    std::vector<std::pair<std::string, int> > getTrigrams();
 
-    std::vector<std::pair<std::string, int>> getDigrams();
+    std::vector<std::pair<std::string, int> > getDigrams();
 };
 
 

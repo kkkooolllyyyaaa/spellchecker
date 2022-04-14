@@ -68,7 +68,7 @@ double SpellChecker::calculateLittleIndex(const std::string &trigram) {
     double trigramN = nFunction(trigram);
     double digramN1 = nFunction(trigram.substr(0, 2));
     double digramN2 = nFunction(trigram.substr(1, 2));
-    return 1.0 / 2.0 * int(digramN1 + digramN2) - trigramN;
+    return 1.0 / 2.0 * (digramN1 + digramN2) - trigramN;
 }
 
 
